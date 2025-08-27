@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanji Shop</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #f3f3f3, #e0f7fa);
+      color: #333;
+    }
+
+    header {
+      background-color: #1e2a38;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff3b3f;
+    }
+
+    .busqueda {
+      display: flex;
+      flex-grow: 1;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .busqueda input {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .busqueda button {
+      background-color: #e60023;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .producto {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .producto button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .formulario-extra {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .formulario-extra input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #1e2a38;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">KanjiShop</div>
+    <div class="busqueda">
+      <input type="text" placeholder="Buscar productos...">
+      <button>🔍</button>
+    </div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Categorías</a>
+      <a href="#">Carrito 🛒</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bienvenido a KanjiShop</h1>
+    <section class="productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x150" alt="Producto 1">
+        <h2>Producto 1</h2>
+        <p>$25.00</p>
+        <button onclick="agregarCarrito('Producto 1')">Agregar al carrito</button>
+        <div class="formulario-extra">
+          <label for="foto1">Subir foto del producto:</label>
+          <input type="file" id="foto1" name="foto1">
+          <label for="usuario1">Nombre del comprador:</label>
+          <input type="text" id="usuario1" name="usuario1" placeholder="Tu nombre">
+        </div>
+      </div>
+
+      <div class="producto">
+        <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+        <h2>Producto 2</h2>
+        <p>$45.00</p>
+        <button onclick="agregarCarrito('Producto 2')">Agregar al carrito</button>
+        <div class="formulario-extra">
+          <label for="foto2">Subir foto del producto:</label>
+          <input type="file" id="foto2" name="foto2">
+          <label for="usuario2">Nombre del comprador:</label>
+          <input type="text" id="usuario2" name="usuario2" placeholder="Tu nombre">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KanjiShop. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function agregarCarrito(producto) {
+      alert(`¡${producto} ha sido agregado al carrito!`);
+    }
+  </script>
+</body>
+</html>
